@@ -29,6 +29,7 @@ use Symfony\AI\Platform\Bridge\Albert\ModelCatalog as AlbertModelCatalog;
 use Symfony\AI\Platform\Bridge\Anthropic\Contract\AnthropicContract;
 use Symfony\AI\Platform\Bridge\Anthropic\ModelCatalog as AnthropicModelCatalog;
 use Symfony\AI\Platform\Bridge\Anthropic\TokenOutputProcessor as AnthropicTokenOutputProcessor;
+use Symfony\AI\Platform\Bridge\AnythingLLM\ModelCatalog as AnythingLLMModelCatalog;
 use Symfony\AI\Platform\Bridge\Cartesia\ModelCatalog as CartesiaModelCatalog;
 use Symfony\AI\Platform\Bridge\Cerebras\ModelCatalog as CerebrasModelCatalog;
 use Symfony\AI\Platform\Bridge\DeepSeek\ModelCatalog as DeepSeekModelCatalog;
@@ -93,6 +94,7 @@ return static function (ContainerConfigurator $container): void {
         ->set('ai.platform.model_catalog.aimlapi', AiMlApiModelCatalog::class)
         ->set('ai.platform.model_catalog.albert', AlbertModelCatalog::class)
         ->set('ai.platform.model_catalog.anthropic', AnthropicModelCatalog::class)
+        ->set('ai.platform.model_catalog.anythingllm', AnythingLLMModelCatalog::class)
         ->set('ai.platform.model_catalog.cartesia', CartesiaModelCatalog::class)
         ->set('ai.platform.model_catalog.cerebras', CerebrasModelCatalog::class)
         ->set('ai.platform.model_catalog.deepseek', DeepSeekModelCatalog::class)
